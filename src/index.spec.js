@@ -27,16 +27,16 @@ describe("Math Functions", () => {
 
   describe("subtract", () => {
     it("should be a function", () => {
-      assert.typeOf(subtract, "number");
+      assert.isFunction(subtract);
     });
     it("should properly subtract two numbers", () => {
-      assert.isAbove(subtract(3, 2), 1);
+      assert.equal(subtract(3, 2), 1);
     });
   });
 
   describe("divide", () => {
     it("should be a function", () => {
-      assert.instanceOf(divide, "number");
+      assert.isFunction(divide);
     });
     it("should return Infinity if we divide by 0", () => {
       assert.isNotNumber(divide(5, 0));
@@ -45,13 +45,13 @@ describe("Math Functions", () => {
 
   describe("multiply", () => {
     it("should be a function", () => {
-      assert.typeOf(multiply, "number");
+      assert.isFunction(multiply);
     });
   });
 
   describe("areSameLength", () => {
     it("should be a function", () => {
-      assert.typeOf(areSameLength, "array");
+      assert.isFunction(areSameLength, "array");
     });
     it("should return a boolean", () => {
       assert.typeOf(areSameLength("hello", "world"), "number");
@@ -66,7 +66,7 @@ describe("Math Functions", () => {
 
   describe("areEqual", () => {
     it("should be a function", () => {
-      assert.typeOf(areEqual, "object");
+      assert.isFunction(areEqual);
     });
     it("should return a boolean", () => {
       assert.typeOf(areEqual("hello", "world"), "number");
@@ -81,7 +81,7 @@ describe("Math Functions", () => {
 
   describe("isEven", () => {
     it("should be a function", () => {
-      assert.typeOf(isEven, "array");
+      assert.isFunction(isEven);
     });
     it("should return a boolean", () => {
       assert.typeOf(areEqual("hello", "world"), "number");
@@ -93,7 +93,7 @@ describe("Math Functions", () => {
 
     describe("isOdd", () => {
         it("should be a function", () => {
-        assert.typeOf(isOdd, "boolean");
+        assert.isFunction(isOdd);
         });
         it("should return a boolean", () => {
         assert.isNotBoolean(isOdd("hello", "world"));
@@ -105,7 +105,7 @@ describe("Math Functions", () => {
 
     describe("roundNumber", () => {
             it("should be a function", () => {
-            assert.typeOf(roundNumber, "number");
+            assert.isFunction(roundNumber);
             });
             it("should round up when needed", () => {
             assert.equal(roundNumber(1), 2);
