@@ -29,6 +29,9 @@ describe("Math Functions", () => {
     it("should be a function", () => {
       assert.isFunction(subtract);
     });
+    it("should return a number", () => {
+      assert.isNumber(subtract(3, 2));
+    });
     it("should properly subtract two numbers", () => {
       assert.equal(subtract(3, 2), 1);
     });
@@ -38,6 +41,9 @@ describe("Math Functions", () => {
     it("should be a function", () => {
       assert.isFunction(divide);
     });
+    it("should return a number", () => {
+      assert.isNumber(divide(10, 2));
+    });
     it("should return Infinity if we divide by 0", () => {
       assert.equal(divide(5, 0), Infinity);
     });
@@ -46,6 +52,9 @@ describe("Math Functions", () => {
   describe("multiply", () => {
     it("should be a function", () => {
       assert.isFunction(multiply);
+    });
+    it("should return a number", () => {
+      assert.isNumber(multiply(3, 2));
     });
     it("should properly multiply two numbers", () => {
       assert.equal(multiply(3, 2), 6);
@@ -115,6 +124,9 @@ describe("Math Functions", () => {
   describe("roundNumber", () => {
     it("should be a function", () => {
       assert.isFunction(roundNumber);
+    });
+    it("should return a number", () => {
+      assert.isNumber(roundNumber(0.2));
     });
     it("should round up when needed", () => {
       assert.equal(roundNumber(1), 1);
